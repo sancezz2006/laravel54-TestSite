@@ -19,8 +19,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
 */
 
-Route::resource('/','IndexController',[
-                                    'only'=>['index']
-                                    ]);
+Route::resource('/','IndexController',  [
+                                    'only'=>['index'],
+                                    'names'=>[
+                                        'index'=>'home'
+                                    ]
+                                        ]);
